@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Intro Kotlin lesson1</string>
+    <string name="app_name">ДЗ №1</string>
+    <string name="show_prop_data_class">Вывести на экран свойства data class-а</string>
 </resources>
