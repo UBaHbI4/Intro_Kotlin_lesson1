@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Intro Kotlin lesson1</string>
+    <string name="app_name">ДЗ №1</string>
+    <string name="show_prop_data_class">Вывести свойства data class-а</string>
+    <string name="cat_name">Васька</string>
+    <string name="show_prop_copy_class">Вывести свойства скопированного класса</string>
+    <string name="show_cycle_example_to_console">Вывести примеры циклов в консоль</string>
+    <string name="log_tag">lesson1</string>
+    <string name="delimiter">-------------------------------</string>
+    <string name="odd_text"> имеет четное значение возраста</string>
+    <string name="not_odd_text"> имеет нечетное значение возраста</string>
 </resources>
