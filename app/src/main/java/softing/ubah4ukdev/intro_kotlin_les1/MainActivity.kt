@@ -36,11 +36,11 @@ class MainActivity : AppCompatActivity() {
 
             //Заполним arrayList экземплярами класса кошек
             val listCats = arrayListOf(
-                    Cat(listName[0], 3),
-                    Cat(listName[1], 6),
-                    Cat(listName[2], 5),
-                    Cat(listName[3], 14),
-                    Cat(listName[4], 4)
+                Cat(listName[0], 3),
+                Cat(listName[1], 6),
+                Cat(listName[2], 5),
+                Cat(listName[3], 14),
+                Cat(listName[4], 4)
             )
 
             //Выведем все имена котов
@@ -57,7 +57,14 @@ class MainActivity : AppCompatActivity() {
             //Выведем имена котов и информацию о четности возраста
             printDelimiter()
             for (i in 0 until listCats.size) {
-                printLog(listCats[i].name + " " + if ((listCats[i].age % 2) == 0) getOddText(true) else getOddText(false))
+                printLog(
+                    listCats[i].name + " " +
+                            if ((listCats[i].age % 2) == 0) {
+                                getOddText(true)
+                            } else {
+                                getOddText(false)
+                            }
+                )
             }
 
             //Выведем нечетные числа от 0 до 10
@@ -71,19 +78,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     //метод для печати в лог сообщений
-    fun printLog(message: String) {
+    private fun printLog(message: String) {
         Log.i(resources.getString(R.string.log_tag), message)
     }
 
     //печать разделителя
-    fun printDelimiter() = printLog(resources.getString(R.string.delimiter))
+    private fun printDelimiter() = printLog(resources.getString(R.string.delimiter))
 
     //Получить текст с ресурсов для четного или нечетного значения
-    fun getOddText(isOdd: Boolean): String {
+    private fun getOddText(isOdd: Boolean): String =
         if (isOdd) {
-            return resources.getString(R.string.odd_text)
+            resources.getString(R.string.odd_text)
         } else {
-            return resources.getString(R.string.not_odd_text)
+            resources.getString(R.string.not_odd_text)
         }
-    }
+
 }
